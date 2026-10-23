@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Specia — Know what grows.</title>
+<meta name="description" content="Identify any plant from a photo — powered by the Pl@ntNet science engine and a network of real botanists. Free on Android.">
+<meta property="og:title" content="Specia — Know what grows.">
+<meta property="og:description" content="Snap a plant, get its name — and when the AI isn't sure, real botanists answer. Free on Android.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --primary: #14532D;
+    --primary-light: #2E7D32;
+    --accent: #8BC34A;
+    --accent-soft: #E9F8CF;
+    --bg: #F7FAF4;
+    --card: #FFFFFF;
+    --text: #1A2E1C;
+    --muted: #5B6B5D;
+    --border: #DCE7DC;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+  header {
+    background: linear-gradient(160deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: #fff;
+    padding: 72px 0 84px;
+    text-align: center;
+  }
+  header .logo { font-size: 15px; letter-spacing: 3px; text-transform: uppercase; opacity: .85; }
+  header h1 { font-size: 52px; line-height: 1.15; margin: 14px 0 18px; font-weight: 800; }
+  header p.sub { font-size: 19px; max-width: 620px; margin: 0 auto 34px; opacity: .95; }
+  .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 14px 30px; border-radius: 12px;
+    font-weight: 700; text-decoration: none; font-size: 16px;
+  }
+  .btn-light { background: var(--accent); color: #14300f; }
+  .btn-light:hover { filter: brightness(1.06); }
+  .btn-ghost { border: 2px solid rgba(255,255,255,.55); color: #fff; }
+  .btn-ghost:hover { background: rgba(255,255,255,.12); }
+  section { padding: 64px 0; }
+  .muted { color: var(--muted); }
+  h2 { font-size: 30px; margin-bottom: 10px; color: var(--primary); }
+  .kicker { text-transform: uppercase; letter-spacing: 2px; font-size: 12.5px; font-weight: 700; color: var(--primary-light); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 30px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+    padding: 26px 24px;
+  }
+  .card h3 { font-size: 18px; margin-bottom: 8px; }
+  .card .icon { font-size: 30px; margin-bottom: 10px; }
+  .steps { counter-reset: step; }
+  .steps .card::before {
+    counter-increment: step; content: counter(step);
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 34px; height: 34px; border-radius: 50%;
+    background: var(--accent-soft); color: var(--primary);
+    font-weight: 800; margin-bottom: 12px;
+  }
+  .expert {
+    background: var(--primary); color: #fff; border-radius: 20px;
+    padding: 52px 40px; text-align: center;
+  }
+  .expert h2 { color: #fff; }
+  .expert p { max-width: 640px; margin: 12px auto 28px; opacity: .93; }
+  .bullet-list { list-style: none; margin-top: 24px; }
+  .bullet-list li { padding: 10px 0 10px 38px; position: relative; }
+  .bullet-list li::before {
+    content: "✓"; position: absolute; left: 0; top: 10px;
+    color: var(--primary-light); font-weight: 800; font-size: 18px;
+  }
+  footer {
+    border-top: 1px solid var(--border); padding: 34px 0 46px;
+    text-align: center; font-size: 14px; color: var(--muted);
+  }
+  footer a { color: var(--primary-light); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  .note { font-size: 13px; margin-top: 18px; opacity: .75; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo">SPECIA</div>
+    <h1>Know what grows.</h1>
+    <p class="sub">Identify any plant from a photo in seconds — and when the AI isn't sure,
+    <strong>real botanists give you the answer.</strong> Free on Android.</p>
+    <div class="cta-row">
+      <a class="btn btn-light" id="play-link" href="#">Get it on Google Play</a>
+      <a class="btn btn-ghost" href="#botanists">I'm a botanist</a>
+    </div>
+    <p class="note">Free · No ads · Your plant history syncs across devices</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">How it works</div>
+    <h2>From weed to wonder in three taps</h2>
+    <div class="grid steps">
+      <div class="card"><h3>Snap the plant</h3><p>Point at leaves, flowers, or bark. Live scan watches the viewfinder and locks onto the species as you frame it.</p></div>
+      <div class="card"><h3>Get the name</h3><p>Species, common names and a confidence score from the science-grade Pl@ntNet engine, plus AI insights on range, care and toxicity.</p></div>
+      <div class="card"><h3>Ask a human when in doubt</h3><p>Not confident on a tricky find? Send it to our botanist network and get a definitive answer from someone who shares your interest in plants.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top: 0;">
+  <div class="wrap">
+    <div class="kicker">Why Specia</div>
+    <h2>The plant app that doesn't shrug</h2>
+    <ul class="bullet-list">
+      <li><strong>Human backup.</strong> Every app gives you a guess. Specia is the one that gives you a botanist.</li>
+      <li><strong>Your collection survives</strong> phone upgrades, rain-soaked packpacks and lost devices — everything is in your account, synced the moment you're back in coverage.</li>
+      <li><strong>Offline-first.</strong> Identify on the trail, sync at the trailhead.</li>
+      <li><strong>Science-grade engine.</strong> Built on Pl@ntNet — the same open platform used by researchers and citizen-science projects worldwide.</li>
+      <li><strong>Free.</strong> No ads, no paywall between you and knowing what's growing by your feet.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="botanists">
+  <div class="wrap">
+    <div class="expert">
+      <div class="kicker" style="color: var(--accent);">For botanists &amp; plant scientists</div>
+      <h2>Become a founding botanist</h2>
+      <p>Specia routes the small share of plant photos the AI can't call confidently to a
+      volunteer network of working botanists and plant-science faculty. A simple in-app queue —
+      photos, notes, location context. Reply from your phone in a few minutes a week, on your
+      own terms. No quotas, fully opt-in, and reviewers who want the visibility are credited
+      by name and institution in the app.</p>
+      <p>It's a low-effort way to turn curious hikers into plant people — the outreach your
+      department already values, done from your pocket.</p>
+      <a class="btn btn-light" href="mailto:specia.app@outlook.com?subject=Founding%20botanist%20—%20count%20me%20in">Become a founding botanist</a>
+      <p class="note">Or just reply to any outreach email you received — setup takes two minutes.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>SPECIA</strong> — Know what grows.</p>
+    <p style="margin-top:6px;">Identification powered by <a href="https://plantnet.org" target="_blank" rel="noopener">Pl@ntNet</a> ·
+    <a href="https://tim92109.github.io/specia-privacy/" target="_blank" rel="noopener">Privacy policy</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
